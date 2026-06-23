@@ -378,17 +378,75 @@ body {
 }
 
 @media (max-width: 900px) {
-  .project-hero img {
-    height: 240px;
+  #project {
+    padding: 60px 24px 40px;
   }
+
+  #project h2 {
+    font-size: 2.4rem;
+    margin-bottom: 32px;
+  }
+
+  .project-card {
+    margin: 0 auto 60px;
+  }
+
+  .project-hero img {
+    width: 100%;
+    height: auto;
+    min-height: 220px;
+  }
+
   .project-info {
     grid-template-columns: 1fr;
+    gap: 24px;
     padding: 28px;
   }
+
   .info-item {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
+
   .info-label {
     white-space: normal;
+    font-size: 1rem;
+  }
+
+  .info-value {
+    font-size: 0.96rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #project {
+    padding: 50px 16px 30px;
+  }
+
+  #project h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .project-card {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .project-info {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+
+  .info-label {
+    font-size: 0.96rem;
+  }
+
+  .info-value {
+    font-size: 0.95rem;
+  }
+
+  .scope-list li {
+    margin: 6px 0;
   }
 }
