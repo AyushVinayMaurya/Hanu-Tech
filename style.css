@@ -193,6 +193,159 @@ body {
   margin-bottom: 0;
 }
 
+#contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 32px 80px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.25) 100%
+    ),
+    url("image/building.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+}
+
+#contact h2 {
+  position: relative;
+  z-index: 1;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 36px;
+  letter-spacing: -0.04em;
+  text-shadow: none;
+}
+
+#contact form {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 40px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.12);
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  padding: 20px 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 40px;
+  background: #f8fafc;
+  color: #111827;
+  font-size: 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+#contact form textarea {
+  min-height: 220px;
+  resize: vertical;
+  grid-column: 1 / -1;
+}
+
+#contact form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 280px;
+  width: 100%;
+  padding: 18px 32px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
+}
+
+#contact > div {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 28px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  text-align: left;
+}
+
+#contact > div h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+#contact > div p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 960px) {
+  #contact form {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  #contact form textarea,
+  #contact form button {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  #contact {
+    padding: 60px 20px 40px;
+  }
+
+  #contact form {
+    padding: 24px;
+  }
+
+  #contact > div {
+    padding: 24px;
+  }
+}
+
 .nav-toggle {
   display: none;
   width: 40px;
@@ -359,19 +512,6 @@ body {
   margin-top: 0;
 }
 
-.scope-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  grid-column: 1 / -1;
-}
-
-.scope-list ul {
-  list-style: none;
-  padding: 0;
-  margin: 8px 0 0;
-}
-
 .scope-list li {
   margin: 8px 0;
   color: #ffffff;
@@ -448,5 +588,101 @@ body {
 
   .scope-list li {
     margin: 6px 0;
+  }
+}
+
+/* ================= CLIENTS ================= */
+
+#clients {
+  padding: 80px 30px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+#clients h2 {
+  font-size: 3rem;
+  color: #0a3b8c;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.client-card {
+  min-height: 140px;
+  padding: 16px;
+  border: 1px solid #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.client-card img {
+  max-width: 120px;
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width: 900px) {
+  #clients {
+    padding: 60px 20px;
+  }
+
+  #clients h2 {
+    font-size: 2.5rem;
+    margin-bottom: 28px;
+  }
+
+  .client-card {
+    min-height: 120px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  #clients {
+    padding: 50px 16px;
+  }
+
+  #clients h2 {
+    font-size: 2rem;
+    margin-bottom: 22px;
+  }
+
+  .client-grid {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+
+  .client-card {
+    min-height: 100px;
+    padding: 12px;
+  }
+
+  .client-card img {
+    max-width: 100px;
+    max-height: 55px;
+  }
+}
+
+@media (max-width: 420px) {
+  .client-grid {
+    grid-template-columns: 1fr;
   }
 }
