@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 html {
@@ -10,7 +11,6 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: "Inter", Arial, sans-serif;
   background: #f5f7fb;
   padding-top: 90px;
 }
@@ -262,7 +262,7 @@ body {
 
 #contact form input:focus,
 #contact form textarea:focus {
-  border-color: #2563eb;
+  border-color: #051e3e;
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
@@ -476,45 +476,84 @@ body {
 }
 
 .project-info {
-  background: #062a6b;
+  background: #051e3e;
   color: #ffffff;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(340px, 1fr) minmax(280px, 1fr);
   gap: 28px;
-  padding: 40px 40px;
+  padding: 40px;
   align-items: start;
 }
 
 .info-col {
   display: grid;
   gap: 18px;
+  padding-right: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .info-item {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 8px 20px;
+  gap: 0 18px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  color: #24e1c8;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 1.05rem;
+}
+
+.info-text {
+  display: grid;
+  gap: 6px;
 }
 
 .info-label {
-  color: #24e1c8;
-  font-weight: 800;
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-  text-transform: capitalize;
-  white-space: nowrap;
+  color: #051e3e;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .info-value {
   color: #ffffff;
   font-size: 1rem;
-  margin-top: 0;
+  line-height: 1.6;
+}
+
+.scope-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.scope-heading {
+  color: #24e1c8;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.scope-list {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #ffffff;
+  line-height: 1.8;
 }
 
 .scope-list li {
-  margin: 8px 0;
-  color: #ffffff;
+  margin: 10px 0;
 }
 
 @media (max-width: 900px) {
