@@ -49,15 +49,15 @@
 
             <h2>Keep in touch with us</h2>
 
-            <form>
+            <form id="contact-form">
 
-                <input type="text" placeholder="Your Name">
+               <input id="name" type="text" name="name" placeholder="Your Name" required>
 
-                <input type="email" placeholder="Your Email">
+                <input id="email" type="email" name="email" placeholder="Your Email" required>
 
-                <input type="tel" placeholder="Phone Number">
+                <input id="telephone" type="tel" name="phone" placeholder="Phone Number" required>
 
-                <textarea placeholder="Your Message"></textarea>
+                <textarea placeholder="Your Message" name="message"></textarea>
 
                 <button type="submit">
                     SEND REQUEST
@@ -129,6 +129,7 @@
         </div>
     </footer>
 
+         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>   
         <script src="script.js"></script>
 
 </body>
