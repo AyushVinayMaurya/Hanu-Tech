@@ -15,6 +15,7 @@ if (navToggle && mainNav) {
   });
 }
 
+// Initialize EmailJS
 emailjs.init({
   publicKey: "r8EIOfZ5HHPh1LckH",
 });
