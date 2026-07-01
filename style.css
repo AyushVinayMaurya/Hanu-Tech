@@ -863,3 +863,18 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ================= CHANNEL PARTNERS ================= */
+#channel-partners {
+  padding: 80px 30px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+#channel-partners h2 {
+  font-size: 3rem;
+  color: #0a3b8c;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
