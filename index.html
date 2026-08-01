@@ -34,6 +34,8 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Added: Swiper styles for the Samatva Bunglow image gallery. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <noscript>
         <link rel="stylesheet" href="style.css">
     </noscript>
@@ -235,7 +237,23 @@
 
             <article class="project-card">
                 <div class="project-hero">
-                    <img src="image/Aathrav developers.png" alt="Atharav Developers">
+                    <!-- Added: swipeable gallery for Samatva Bunglow only. -->
+                    <div class="swiper samatvaSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="image/Aathrav developers.png" alt="Atharav Developers">
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Added: native lazy loading for the second gallery image. -->
+                                <img src="image/Aathrav developer 2.png" alt="Atharav Developers" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- Added: gallery navigation controls. -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <!-- Added: gallery pagination controls. -->
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
                 <div class="project-info">
                     <div class="info-col">
@@ -800,6 +818,23 @@
 
 
 
+    <!-- Added: Swiper library and Samatva Bunglow gallery setup. -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Added: initializes the Samatva Bunglow image gallery only.
+        new Swiper('.samatvaSwiper', {
+            loop: true,
+            speed: 500,
+            navigation: {
+                nextEl: '.samatvaSwiper .swiper-button-next',
+                prevEl: '.samatvaSwiper .swiper-button-prev'
+            },
+            pagination: {
+                el: '.samatvaSwiper .swiper-pagination',
+                clickable: true
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 

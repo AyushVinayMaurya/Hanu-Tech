@@ -613,6 +613,12 @@ body {
   display: block;
 }
 
+/* Added: confines Swiper styling to the Samatva Bunglow image gallery. */
+.samatvaSwiper {
+  width: 100%;
+  --swiper-theme-color: #ffffff;
+}
+
 .project-info {
   background: #051e3e;
   color: #ffffff;
